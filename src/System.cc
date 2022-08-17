@@ -473,6 +473,37 @@ void System::SaveTrajectoryKITTI(const string &filename)
     cout << endl << "trajectory saved!" << endl;
 }
 
+void System::SaveMapPointsKITTI(const string &filename)
+{
+    cout << endl << "Saving map points to " << filename << " ..." << endl;
+
+    const vector<MapPoint*> &vpMPs = mpMap->GetAllMapPoints();
+
+    // Transform all keyframes so that the first keyframe is at the origin.
+    // After a loop closure the first keyframe might not be at the origin.
+
+    ofstream f;
+    f.open(filename.c_str());
+    f << fixed;
+
+    // Frame pose is stored relative to its reference keyframe (which is optimized by BA and pose graph).
+    // We need to get first the keyframe pose and then concatenate the relative transformation.
+    // Frames not localized (tracking failure) are not saved.
+
+    // For each frame we have a reference keyframe (lRit), the timestamp (lT) and a flag
+    // which is true when tracking failed (lbL).
+    list<ORB_SLAM2::KeyFrame*>::iterator lRit = mpTracker->mlpReferences.begin();
+    
+    for(size_t i=0, iend=vpMPs.size(); i<iend;i++)
+    {
+        cv::Mat pos = vpMPs[i]->GetWorldPos();
+        f << pos.at<float>(0) << " " << pos.at<float>(1)  << " " <<pos.at<float>(2) << " " << endl;
+    }
+
+    f.close();
+    cout << endl << "Map points saved!" << endl;
+}
+
 int System::GetTrackingState()
 {
     unique_lock<mutex> lock(mMutexState);
