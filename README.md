@@ -14,5 +14,4 @@ If you want to use this fuction, copy and paste the `System.h` and `System.cc` f
 [Presentation Video (Korean)](https://www.youtube.com/watch?v=J4syHj3I0gU)
 
 [Youtube Video](https://www.youtube.com/watch?v=d2CYIIlkTJs)
-![](slam1.png)
-![](slam2.png)
+![](slam.png)
