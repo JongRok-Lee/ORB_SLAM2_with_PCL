@@ -9,3 +9,5 @@ If you want to run this module, please use the docker image (https://hub.docker.
 
 This code include the function that save the map point (`SaveMapPointsKITTI`).
 If you want to use this fuction, copy and paste the `System.h` and `System.cc` files into each file in the docker image.
+![](slam1.png)
+![](slam2.png)
