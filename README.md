@@ -11,7 +11,7 @@ This code include the function that save the map point (`SaveMapPointsKITTI`).
 If you want to use this fuction, copy and paste the `System.h` and `System.cc` files into each file in the docker image.
 
 # Result
-(Presentation Video (Korean))[https://www.youtube.com/watch?v=J4syHj3I0gU]
-(Youtube)[https://www.youtube.com/watch?v=d2CYIIlkTJs]
+[Presentation Video (Korean)](https://www.youtube.com/watch?v=J4syHj3I0gU)
+[Youtube](https://www.youtube.com/watch?v=d2CYIIlkTJs)
 ![](slam1.png)
 ![](slam2.png)
