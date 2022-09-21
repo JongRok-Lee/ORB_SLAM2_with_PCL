@@ -1,6 +1,6 @@
 # ORB_SLAM2_with_PCL
 This is a modified ORB_SLAM2 (from  https://github.com/raulmur/ORB_SLAM2) with a visualization module.
-I only add the visualization module to ORB SLAM2 (from https://github.com/gaoxiang12/ORBSLAM2_with_pointcloud_map) with the effort not to change the original code. 
+I only add the visualization module to ORB SLAM2 (from https://github.com/gaoxiang12/ORBSLAM2_with_pointcloud_map) to maintain the original function of ORB-SLAM2. 
 
 # Run
 This repository exists for only show the source code.
